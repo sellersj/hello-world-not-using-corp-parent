@@ -21,8 +21,6 @@
   <version>0.0.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>${jiraKey} - Test Project</name>
-
   <scm>
     <connection>${git.scm.prefix}${git.ssh.base}/${git.project.id}/${git.repo.name}.git</connection>
     <developerConnection>${git.scm.prefix}${git.ssh.base}/${git.project.id}/${git.repo.name}.git</developerConnection>

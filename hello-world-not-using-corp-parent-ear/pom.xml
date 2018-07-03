@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
     <groupId>com.github.sellersj.no.corp.parent</groupId>
@@ -11,8 +12,6 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>hello-world-not-using-corp-parent-ear</artifactId>
   <packaging>ear</packaging>
-  <name>${jiraKey} - ${project.artifactId}</name>
-  <description>Update pom.  Added EAR pom comment.</description>
 
   <dependencies>
     <dependency>
