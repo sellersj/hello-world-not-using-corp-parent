@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>  
+  <sub-deployment name="hello-world-not-using-corp-parent-war.war">
+    <exclusions>
+      <module name="org.apache.log4j" />
+      <module name="org.slf4j" />
+      <module name="org.apache.commons.logging" />
+      <module name="org.hibernate" />
+      <module name="org.hibernate.validator" />
+    </exclusions>
+  </sub-deployment>
+</jboss-deployment-structure>

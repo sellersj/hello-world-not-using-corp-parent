@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <properties>
+    <contextRoot>/my/hello-world</contextRoot>
+
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <!-- TODO change this to be where ever the project is checked into. -->
+    <git.project.id>SANDBOX</git.project.id>
+    <git.repo.name>hello-world-not-using-corp-parent</git.repo.name>
+  </properties>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.sellersj.no.corp.parent</groupId>
+  <artifactId>hello-world-not-using-corp-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>${jiraKey} - Test Project</name>
+
+  <scm>
+    <connection>${git.scm.prefix}${git.ssh.base}/${git.project.id}/${git.repo.name}.git</connection>
+    <developerConnection>${git.scm.prefix}${git.ssh.base}/${git.project.id}/${git.repo.name}.git</developerConnection>
+    <url>${git.https.base}/${git.project.id}/${git.repo.name}</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <!-- set variables in your settings.xml that match to your nexus release / snapshot repos -->
+    <repository>
+      <id>${distributionManagement-internal-released-id}</id>
+      <url>${distributionManagement-internal-released-url}</url>
+    </repository>
+    <snapshotRepository>
+      <id>${distributionManagement-internal-snapshots-id}</id>
+      <url>${distributionManagement-internal-snapshots-url}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <modules>
+    <module>hello-world-not-using-corp-parent-ear</module>
+    <module>hello-world-not-using-corp-parent-war</module>
+  </modules>
+
+  <description>Test Project for testing a release not using parent pom.</description>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

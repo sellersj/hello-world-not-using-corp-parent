@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>com.github.sellersj.no.corp.parent</groupId>
+    <artifactId>hello-world-not-using-corp-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>hello-world-not-using-corp-parent-ear</artifactId>
+  <packaging>ear</packaging>
+  <name>${jiraKey} - ${project.artifactId}</name>
+  <description>Update pom.  Added EAR pom comment.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>hello-world-not-using-corp-parent-war</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <configuration>
+          <displayName>${project.artifactId}</displayName>
+          <modules>
+            <webModule>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>hello-world-not-using-corp-parent-war</artifactId>
+              <contextRoot>${contextRoot}</contextRoot>
+              <bundleFileName>hello-world-not-using-corp-parent-war.war</bundleFileName>
+            </webModule>
+          </modules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
