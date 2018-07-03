@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.github.sellersj.no.corp.parent</groupId>
     <artifactId>hello-world-not-using-corp-parent</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
   </parent>
 
   <properties>
